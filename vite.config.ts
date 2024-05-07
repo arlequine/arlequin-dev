@@ -6,5 +6,6 @@ export default defineConfig({
   plugins: [
     react(),
     svgr()
-  ]
+  ],
+  base: "/arlequin-dev/"
 })

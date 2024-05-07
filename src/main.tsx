@@ -12,18 +12,18 @@ import Home from './views/Home.tsx';
 
 const router = createBrowserRouter([
   {
-		path: "/",
+	path: "/",
     element:  <App />,
-		children: [
-			{
-				path:'/',
-				element: <Home />
-			},
-			{
-				path:'/blog',
-				element: <Blog />
-			}
-		]
+	children: [
+		{
+			path:'/',
+			element: <Home />
+		},
+		{
+			path:'/blog',
+			element: <Blog />
+		}
+	]
   }
 ]);
 
