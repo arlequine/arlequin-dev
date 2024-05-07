@@ -1,0 +1,10 @@
+.hero {
+    width: 100%;
+    display: flex;
+    color: #ffffff;
+    background-color: #3A3D57;
+}
+
+.left, .right{
+    width: 100%;
+}
