@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import IconHome from '../../assets/icon-home.svg?react'
+import IconHome from '../../assets/icon-home.svg'
 
 const Navbar = () => {
   return (
@@ -26,7 +26,7 @@ const Navbar = () => {
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div className="container-fluid">
 					<div className="navbar-brand">
-						<IconHome />
+						<img src={IconHome} alt="Icon-home" />
 					</div>
 					<div className="collapse navbar-collapse" id="navbarNav">
 						<ul className="navbar-nav">
