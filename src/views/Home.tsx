@@ -1,6 +1,6 @@
 import FlipCard from "../components/FlipCard/FlipCard"
 import ArlequinImg from "../assets/arlequin.png"
-import {ReactTyped} from "react-typed";
+//import {ReactTyped} from "react-typed";
 import "./home.css"
 
 const Home = () => {
