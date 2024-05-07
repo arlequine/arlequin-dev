@@ -27,7 +27,7 @@ const Home = () => {
           <p className="display-5">full-stack developer</p>
           </div>
         </div>
-          <div className=" col-12 d-block d-md-none d-lg-none">
+          <div className="col-12 d-block d-md-none d-lg-none d-flex justify-content-center">
             <img src={ArlequinImg} alt="Arlequin" />
           </div>
       </section>
