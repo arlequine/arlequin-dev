@@ -26,7 +26,9 @@ const Navbar = () => {
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div className="container-fluid">
 					<div className="navbar-brand">
-						<img src={IconHome} alt="Icon-home" />
+						<Link to={'/'}>
+							<img src={IconHome} alt="Icon-home" />
+						</Link>
 					</div>
 					<div className="collapse navbar-collapse" id="navbarNav">
 						<ul className="navbar-nav">
