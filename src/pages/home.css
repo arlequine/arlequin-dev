@@ -8,3 +8,24 @@
 .left, .right{
   width: 100%;
 }
+
+.card {
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.card-body {
+  padding: 2rem; /* Espaciado interno */
+}
+
+.custom-btn {
+  background-color: #614F7D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-btn:hover {
+  background-color: #4A4D63;
+}
