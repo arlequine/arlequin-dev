@@ -1,8 +1,7 @@
-import React from 'react';
+
 import { Container, Row, Col } from 'react-bootstrap';
 import FlipCard from "../components/FlipCard/FlipCard";
 import ArlequinImg from "../assets/arlequin.png";
-// import { ReactTyped } from "react-typed";
 import "./home.css";
 
 const Home = () => {
@@ -16,15 +15,6 @@ const Home = () => {
             </Col>
             <Col sm={12} md={6} className="d-flex flex-column justify-content-center">
               <h1 className="display-1">
-                {/* I'm a{" "}
-                <ReactTyped
-                  strings={["Developer", "Writer", "Designer"]}
-                  typeSpeed={100}
-                  loop
-                  backSpeed={20}
-                  cursorChar=">"
-                  showCursor={true}
-                /> */}
                 Arlequin Dev
               </h1>
               <p className="display-5">full-stack developer</p>

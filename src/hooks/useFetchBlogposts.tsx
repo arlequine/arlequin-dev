@@ -17,7 +17,7 @@ const useFetchBlogPosts = () => {
     const fetchPosts = async () => {
       try {
         // const response = await fetch('https://jsonplaceholder.typicode.com/posts'); // URL de la API
-        const response = await fetch(`https://cdn.contentful.com/spaces/${import.meta.env.VITE_SPACE_ID}/environments/${import.meta.env.VITE_ENVIRONMENT_ID}/entries?access_token=${import.meta.env.VITE_ACCESS_TOKEN}`); // URL de la API
+        const response = await fetch(`https://cdn.contentful.com/spaces/${import.meta.env.VITE_SPACE_ID}/environments/${import.meta.env.VITE_ENVIRONMENT_ID}/entries?access_token=${import.meta.env.VITE_TOKEN}`); // URL de la API
         if (!response.ok) {
           throw new Error('Error al obtener los posts');
         }
