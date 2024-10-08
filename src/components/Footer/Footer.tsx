@@ -8,17 +8,11 @@ const Footer: React.FC = () => {
     <footer className="bg-light text-dark py-4">
       <Container>
         <Row className="justify-content-between">
-          <Col md={6}>
-            <h5>Enlaces útiles</h5>
-            <ul className="list-unstyled">
-              <li><Link to="/about" className="text-dark">Sobre Mi</Link></li>
-              <li><Link to="/blog" className="text-dark">Blog</Link></li>
-              {/* <li><a href="/contact" className="text-dark">Contacto</a></li>
-              <li><a href="/privacy" className="text-dark">Blog</a></li>
-              <li><a href="/terms" className="text-dark">Términos de servicio</a></li> */}
-            </ul>
+          <Col xs={12} md={6}>
+            <h5>Arlequin Dev</h5>
+            <p>Lo importante es el camino y en él <strong>Caer</strong>, <strong>Levantarse</strong>, <strong>Insistir</strong>, <strong>Aprender</strong></p>
           </Col>
-          <Col md={6} className="text-md-right">
+          <Col xs={12} md={6} className="text-md-right d-flex flex-column align-items-end">
             <h5>Redes Sociales</h5>
             <div>
               <Link to="https://github.com/arlequine" className="text-dark mx-2"><FaGithub /></Link>
@@ -29,7 +23,7 @@ const Footer: React.FC = () => {
         </Row>
         <Row>
           <Col className="text-center mt-3">
-            <p>&copy; {new Date().getFullYear()} Tu Empresa. Todos los derechos reservados.</p>
+            <p>&copy; {new Date().getFullYear()} Arlequin Dev. Todos los derechos reservados.</p>
           </Col>
         </Row>
       </Container>
