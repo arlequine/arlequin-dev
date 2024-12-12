@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.11.8",
+    "@emailjs/browser": "^4.4.1",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "graphql": "^16.9.0",
