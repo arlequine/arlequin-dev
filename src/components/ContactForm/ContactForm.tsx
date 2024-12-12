@@ -34,7 +34,7 @@ const ContactForm: React.FC = () => {
         },
         import.meta.env.VITE_PUBLIC_KEY
       );
-
+      console.log(result)
       setStatus('Mensaje enviado exitosamente');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
