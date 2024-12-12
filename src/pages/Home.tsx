@@ -140,9 +140,15 @@ const Home = () => {
           <h2 className="text-center mb-4">Sobre mí</h2>
           <Row>
             <Col xs={12} md={6} lg={6} className="mx-auto">
-              <p className="about-me text-center">Soy un <strong>Desarrollador full-stack</strong> que crea y administra sitios web y aplicaciones web al igual que aplicaciones moviles que conducen al éxito del producto general. </p>
-              <p className="about-me text-center">También me gusta compartir lo que he aprendido a lo largo de los años en el desarrollo web asi que tambien me gusta enseñar, llevo unos años enseñando en comunidades y bootcamps de desarrollo. No dudes en conectarte o seguirme en mi <a href="https://www.linkedin.com/in/alfredo-hdz-noriega/" target="_blank">Linkedin</a> e <a href="https://www.instagram.com/el_arlequin_/" target="_blank">Instagram</a>, donde publico contenido útil relacionado con el <strong>desarrollo web y la programación.</strong></p>
-              <p className="about-me text-center">Estoy abierto a oportunidades laborales en las que pueda contribuir, aprender y crecer. Si existe una buena oportunidad que coincida con mis habilidades y experiencia, no dudes en contactarme.</p>
+            <p className="about-me text-center">
+              Soy un <strong>Desarrollador Full-Stack</strong> con experiencia en la creación y gestión de sitios web, aplicaciones web y aplicaciones móviles que impulsan el éxito de los productos.
+            </p>
+            <p className="about-me text-center">
+              También disfruto compartir lo que he aprendido a lo largo de los años en el desarrollo web. Me apasiona enseñar, y he tenido la oportunidad de hacerlo en comunidades y bootcamps de desarrollo. No dudes en conectarte o seguirme en mi <a href="https://www.linkedin.com/in/alfredo-hdz-noriega/" target="_blank">LinkedIn</a> e <a href="https://www.instagram.com/el_arlequin_/" target="_blank">Instagram</a>, donde comparto contenido útil relacionado con el <strong>desarrollo web y la programación.</strong>
+            </p>
+            <p className="about-me text-center">
+              Estoy abierto a nuevas oportunidades laborales en las que pueda contribuir, aprender y crecer profesionalmente. Si tienes una oportunidad que se alinee con mis habilidades y experiencia, no dudes en contactarme.
+            </p>
             </Col>
             <Col xs={12} md={6} lg={6} className="mx-auto">
               <h3>Habilidades</h3>

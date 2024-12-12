@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Col, Row } from 'react-bootstrap';
+import emailjs from '@emailjs/browser';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +8,8 @@ const ContactForm: React.FC = () => {
     email: '',
     message: ''
   });
+
+  const [status, setStatus] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -16,10 +19,28 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío del formulario, por ejemplo, enviando los datos a un servidor
-    console.log('Datos del formulario:', formData);
+    
+    try {
+      
+      const result = await emailjs.send(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message
+        },
+        import.meta.env.VITE_PUBLIC_KEY
+      );
+
+      setStatus('Mensaje enviado exitosamente');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      setStatus('Error al enviar el mensaje');
+      console.error('Error:', error);
+    }
   };
 
   return (
@@ -61,6 +82,7 @@ const ContactForm: React.FC = () => {
               <Button className="mt-3" variant="primary" type="submit">
                 Enviar
             </Button>
+            {status && <p className="mt-3">{status}</p>}
           </Form>
         </Col>
       </Row>
