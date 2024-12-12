@@ -1,15 +1,34 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import CardBackImg from '../../assets/card-back.svg'
 import CardFrontImg from '../../assets/card-front.svg'
 import './FlipCard.css'
 
 const FlipCard = () => {
   const [isFlipped, setIsFlipped] = useState(false)
+  const cardRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
-      // Alternar el estado de la carta en cada scroll
-      setIsFlipped(prevState => !prevState)
+      if (!cardRef.current) return
+
+      // Obtener la posición del elemento en la ventana
+      const rect = cardRef.current.getBoundingClientRect()
+      const windowHeight = window.innerHeight
+
+      // Calcular cuando la tarjeta está en el 50% de la ventana
+      const isHalfVisible = 
+        rect.top <= windowHeight / 2 && 
+        rect.bottom >= windowHeight / 2
+
+      // Voltear la tarjeta cuando esté en el 50% de la ventana
+      if (isHalfVisible) {
+        setIsFlipped(true)
+      }
+
+      // Volver a voltear si se está al inicio de la página
+      if (window.scrollY === 0) {
+        setIsFlipped(false)
+      }
     }
 
     // Añadir el event listener de scroll
@@ -22,7 +41,10 @@ const FlipCard = () => {
   }, [])
 
   return (
-    <div className={`flip-card ${isFlipped ? 'flipped' : ''}`}>
+    <div 
+      ref={cardRef}
+      className={`flip-card ${isFlipped ? 'flipped' : ''}`}
+    >
       <div className="flip-card-inner">
         <div className="flip-card-front">
           <img src={CardBackImg} alt="Back-Card" />
