@@ -1,12 +1,10 @@
 import { Container, Row, Col, Button, Badge } from 'react-bootstrap';
 import FlipCard from "../components/FlipCard/FlipCard";
-import ArlequinImg from "../assets/arlequin.png";
 import { useQuery, gql } from '@apollo/client';
 import Timeline from '../components/Timeline/Timeline';
 import ContactForm from '../components/ContactForm/ContactForm';
-
-import "./home.css";
 import ArlequinLogo from '../assets/arlequin-logo.svg'
+import "./home.css";
 
 
 const experiences = [

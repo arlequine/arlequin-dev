@@ -4,7 +4,6 @@
   list-style: none;
 }
 
-/* Animaciones de scroll */
 @keyframes slideInFromLeft {
   from {
     opacity: 0;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import CardBackImg from '../../assets/card-back.svg'
 import CardFrontImg from '../../assets/card-front.svg'
 import './FlipCard.css'
