@@ -6,6 +6,7 @@ import Timeline from '../components/Timeline/Timeline';
 import ContactForm from '../components/ContactForm/ContactForm';
 
 import "./home.css";
+import ArlequinLogo from '../assets/arlequin-logo.svg'
 
 
 const experiences = [
@@ -108,6 +109,7 @@ const experiences = [
 const Home = () => {
 
   const { data } = useQuery(query);
+
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = data.cv.filePdf.url; // Reemplaza con la ruta correcta a tu CV
@@ -122,8 +124,8 @@ const Home = () => {
       <section className="p-5 hero text-center">
         <Container>
           <Row>
-            <Col md={6} className="d-none d-md-block">
-              <FlipCard />
+            <Col className="d-flex justify-content-center">
+              <img src={ArlequinLogo} alt="Arlequin" className="img-fluid" />
             </Col>
             <Col sm={12} md={6} className="d-flex flex-column justify-content-center">
               <h1 className="display-3 font-weight-bold">Arlequin Dev</h1>
@@ -131,11 +133,6 @@ const Home = () => {
               <Button variant="primary" onClick={handleDownload} className="mt-3 custom-btn">
                 Descargar CV
               </Button>
-            </Col>
-          </Row>
-          <Row className="d-block d-md-none">
-            <Col className="d-flex justify-content-center">
-              <img src={ArlequinImg} alt="Arlequin" className="img-fluid" />
             </Col>
           </Row>
         </Container>
@@ -181,8 +178,13 @@ const Home = () => {
         <Container>
           <h2 className="text-center mb-4">Proyectos en los que he participado</h2>
           <Row>
-            <Col xs={12} md={10} lg={8} className="mx-auto">
+            <Col xs={12} md={6} lg={6} className="mx-auto">
               <Timeline experiences={experiences} />
+            </Col>
+            <Col xs={12} md={6} lg={6} className="mx-auto d-none d-md-block" >
+              <div className="scroll-svg-container">
+                <FlipCard />
+              </div>
             </Col>
           </Row>
         </Container>

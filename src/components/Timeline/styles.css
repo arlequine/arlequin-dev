@@ -4,19 +4,50 @@
   list-style: none;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 20px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #e9ecef;
+/* Animaciones de scroll */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Estilos de elementos de la línea de tiempo */
 .timeline-item {
   position: relative;
   margin-left: 40px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease;
+}
+
+/* Estado visible al hacer scroll */
+.timeline-item.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+  animation: 
+    slideInFromLeft 0.8s ease-out forwards,
+    fadeIn 0.8s ease-out forwards;
+}
+
+/* Animación de ícono */
+@keyframes pulseIcon {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 .timeline-icon {
@@ -26,8 +57,13 @@
   width: 16px;
   height: 16px;
   background: #fff;
-  border: 2px solid #e9ecef;
+  border: 2px solid #614F7D;
   border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.timeline-item.is-visible .timeline-icon {
+  animation: pulseIcon 1s ease infinite alternate;
 }
 
 .timeline-content {
@@ -36,25 +72,26 @@
 
 .card-timeline {
   border: none !important;
+  overflow: hidden;
 }
+
 .card-timeline .card-body {
   border: none !important;
 }
-.card-timeline .list-group {
-  border-left: 1px solid hsl(0, 0%, 90%);
-}
+
 .card-timeline .list-group-item {
   border: none !important;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
-.card-timeline .list-group .list-group-item:before {
-  background-color: hsl(0, 0%, 90%);
-  left: -7px;
-  border-radius: 50%;
-  height: 11px;
-  width: 11px;
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: 1;
+.card-timeline .list-group-item:hover:before {
+  background-color: #614F7D !important;
+  transform: scale(1.2);
+}
+
+/* Efecto hover sutil */
+.card-timeline .list-group-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }

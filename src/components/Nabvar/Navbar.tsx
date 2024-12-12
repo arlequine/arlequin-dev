@@ -37,11 +37,11 @@ const Navbar = () => {
 									Home
 								</Link>
 							</li>
-							<li className="nav-item">
+							{/* <li className="nav-item">
 								<Link to={'/blog'} className="nav-link active">
 									Blog
 								</Link>
-							</li>
+							</li> */}
 						</ul>
 					</div>
 				</div>

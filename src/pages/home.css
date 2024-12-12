@@ -37,3 +37,10 @@
   background-color: #614F7D !important;
   color: #ffffff;
 }
+
+.scroll-svg-container {
+  position: sticky;
+  top: 100px;
+  align-items: flex-start;
+  z-index: 10;
+}
