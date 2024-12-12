@@ -26,7 +26,7 @@ const ContactForm: React.FC = () => {
     <Container>
       <Row>
       <h3>Contáctame</h3>
-        <Col md={6}>
+        <Col md={12}>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="formName">
               <Form.Label>Nombre:</Form.Label>
