@@ -144,7 +144,7 @@ const Home = () => {
               Soy un <strong>Desarrollador Full-Stack</strong> con experiencia en la creación y gestión de sitios web, aplicaciones web y aplicaciones móviles que impulsan el éxito de los productos.
             </p>
             <p className="about-me text-center">
-              También disfruto compartir lo que he aprendido a lo largo de los años en el desarrollo web. Me apasiona enseñar, y he tenido la oportunidad de hacerlo en comunidades y bootcamps de desarrollo. No dudes en conectarte o seguirme en mi <a href="https://www.linkedin.com/in/alfredo-hdz-noriega/" target="_blank">LinkedIn</a> e <a href="https://www.instagram.com/el_arlequin_/" target="_blank">Instagram</a>, donde comparto contenido útil relacionado con el <strong>desarrollo web y la programación.</strong>
+              También disfruto compartir lo que he aprendido a lo largo de los años en el desarrollo web. Me apasiona enseñar, y he tenido la oportunidad de hacerlo en comunidades y bootcamps de desarrollo. No dudes en conectarte o seguirme en mi <a href="https://www.linkedin.com/in/alfredo-hdz-noriega/" target="_blank">LinkedIn</a> y <a href="https://github.com/arlequine" target="_blank">Github</a>, donde comparto contenido útil relacionado con el <strong>desarrollo web y la programación.</strong>
             </p>
             <p className="about-me text-center">
               Estoy abierto a nuevas oportunidades laborales en las que pueda contribuir, aprender y crecer profesionalmente. Si tienes una oportunidad que se alinee con mis habilidades y experiencia, no dudes en contactarme.
