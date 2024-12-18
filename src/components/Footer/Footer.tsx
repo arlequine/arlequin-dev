@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -16,7 +16,6 @@ const Footer: React.FC = () => {
             <h5>Redes Sociales</h5>
             <div>
               <Link to="https://github.com/arlequine" className="text-dark mx-2"><FaGithub /></Link>
-                {/* <Link to="https://www.instagram.com/el_arlequin_/" className="text-dark mx-2"><FaInstagram /></Link> */}
               <Link to="https://www.linkedin.com/in/alfredo-hdz-noriega/" className="text-dark mx-2"><FaLinkedin /></Link>
             </div>
           </Col>
